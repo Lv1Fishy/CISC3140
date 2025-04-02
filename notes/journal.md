@@ -2,3 +2,13 @@
 Added "documentation.md" to notes
 Detailing the explanation and plan of our project
 
+## 4/2/2025 Jiahui Yu ##
+Setting up the Unity Project such that changes made in Unity is ready for commits
+i.e. no need for manual changes, changes in unity mean changes in repository.
+
+    -   In Unity Project, added a few folders for future uses where we organize Prefabs, Scripts, and Scenes
+    -   Future folders may be needed such as packages, assets, animations, etc. As of now, we start simple.
+    -   <IMPORTANT> When creating a scene, make sure to build that scene on the top left corner of Unity Editor
+        (file -> Build Profiles -> Scene List -> Add Open Scenes)
+        Make sure that the scene you want to build is opened in the editor
+        
