@@ -11,4 +11,7 @@ i.e. no need for manual changes, changes in unity mean changes in repository.
     -   <IMPORTANT> When creating a scene, make sure to build that scene on the top left corner of Unity Editor
         (file -> Build Profiles -> Scene List -> Add Open Scenes)
         Make sure that the scene you want to build is opened in the editor
-        
+
+## 4/6/2025 Jiahui Yu ##
+Created a bunch of more folders in the "Prefab" folder for future uses
+Created a player script for simple movement, allows for the player object to move around
