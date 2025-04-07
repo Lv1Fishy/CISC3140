@@ -13,7 +13,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
     
     [SerializeField] int HP;
-    [SerializeField] float movementSpeed = 5;
+    [SerializeField] float movementSpeed = 10f;
 
 
     [SerializeField] Rigidbody2D body;
@@ -24,9 +24,8 @@ public class PlayerScript : MonoBehaviour {
 
     
     void Update() {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        body.linearVelocity = new Vector2(moveHorizontal * movementSpeed, moveVertical * movementSpeed);
+        PlayerMovement();   //Checks for player input and moves the player accordingly
+        
         
     }
     
@@ -34,4 +33,12 @@ public class PlayerScript : MonoBehaviour {
         
     }
 
+    /*
+    * PlayerMovement() - Handles player movement based on input
+    */
+    void PlayerMovement() {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        body.linearVelocity = new Vector2(moveHorizontal * movementSpeed, moveVertical * movementSpeed);
+    }        
 }
