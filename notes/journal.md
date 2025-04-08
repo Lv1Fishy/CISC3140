@@ -15,3 +15,10 @@ i.e. no need for manual changes, changes in unity mean changes in repository.
 ## 4/6/2025 Jiahui Yu ##
 Created a bunch of more folders in the "Prefab" folder for future uses
 Created a player script for simple movement, allows for the player object to move around
+
+## 4/7/2025 Jiahui Yu ##
+Created a persistent data script to keep track of the player's stats
+Added a script where the camera follows the player object
+Began developing the player's inventory UI
+
+## 
