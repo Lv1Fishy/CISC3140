@@ -20,3 +20,15 @@
     -   In order to make players use more consummables, just simply remove all weapons. If a player doesn't have any weapon, his only
         choice is to use consummables. 
     -   Introduction to each consummables should be showned how it's used such as a bottle that broke lure enemies in the vicinity.
+
+
+# Map Plans #
+    -   Demo Land
+    -   Creating a demo land containing everything. 
+    -   Perhaps creating a house/area containing its own usage. \
+            - "Shop" house/cart containing all the items we've added. 
+            - "Training" area containing all the monster/enemies and being able to spawn or set spawn timer. 
+            - "Alchemist" house/cart containing all the game buffs. 
+    -   Small Puzzle
+    -   If we have time we can create a small puzzle area containing enemies in random area? I'm not sure we'll see in the furture. 
+        If anything I can just set it to spawn in a same place and let the puzzle repeat until we have better idea. 
