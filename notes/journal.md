@@ -21,4 +21,6 @@ Created a persistent data script to keep track of the player's stats
 Added a script where the camera follows the player object
 Began developing the player's inventory UI
 
-## 
+## 4/8/2025 Jiahui Yu ##
+Worked on the Inventory UI, added a bunch of visual icons.
+Scripts for Inventory UI and items requires further coding or may need to be scrapped.
