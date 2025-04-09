@@ -6,31 +6,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
-    [SerializeField] Items item;
+    
     [Header("UI")]
-    [SerializeField] Image icon;
+    public Image image;
+    
     [HideInInspector] public Transform parentAfterDrag;
-
-    private void Start() {
-        InitialiseItem(item);
-    }
-
-    private void InitialiseItem(Items item) {
-        this.item = item; // Assign the item to the current instance
-        image.sprite = item.image; // Set the icon sprite to the item's sprite
+    [HideInInspector] public Items item;
+    private void InitialiseItem(Items newItem) {
+        item = newItem; // Assign the item to the current instance
+        image.sprite = newItem.image; // Set the icon sprite to the item's sprite
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
         image.raycastTarget = false; // Disable raycast target to allow dragging
         parentAfterDrag = transform.parent; // Store the parent transform before dragging
-        transforms.SetParent(transform.root); // Set the parent to the root to allow free movement
+        transform.SetParent(transform.root); // Set the parent to the root to allow free movement
     }
 
     public void OnDrag(PointerEventData eventData){
-        transform.position = eventData.position; // Update the position of the item to follow the mouse cursor
+        transform.position = Input.mousePosition; // Update the position of the item to follow the mouse cursor
     }
 
     public void OnEndDrag(PointerEventData eventData){

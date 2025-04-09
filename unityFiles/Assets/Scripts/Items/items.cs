@@ -4,24 +4,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.tilemaps;
+using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Items")]
-public class items : ScriptableObject {
+public class Items : ScriptableObject {
 
-    [SerializeField] TileBase base;
-    [SerializeField] ItemType type;
-    [SerializeField] ActionType actionType;
-    [SerializeField] Vector2Int range = new Vector2Int(5, 4);
+    [Header("Only gameplay")]
+    public TileBase tile;
+    public ItemType type;
+    public ActionType actionType;
+    public Vector2Int range = new Vector2Int(5, 4);
+    [Header("Only UI")]
+    public bool stackable = true;
 
-    [SerializeField] bool stackable = true;
+    [Header("Both")]
+    public Sprite image;
 
     public enum ItemType {
-
+        Throwable,
+        Consumable
     }
 
     public enum ActionType {
-
+        Damage,
+        Heal
     }
 
 }
