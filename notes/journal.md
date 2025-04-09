@@ -13,23 +13,38 @@ i.e. no need for manual changes, changes in unity mean changes in repository.
         Make sure that the scene you want to build is opened in the editor
         
 ## 4/2/2025 Oscar Huang ##
-Added "Link" to notes
+Added "Link" to notes \
 Listing all the links we'll be using for this projects
 
 ## 4/6/2025 Jiahui Yu ##
-Created a bunch of more folders in the "Prefab" folder for future uses
+Created a bunch of more folders in the "Prefab" folder for future uses \
 Created a player script for simple movement, allows for the player object to move around
 
 ## 4/7/2025 Jiahui Yu ##
-Created a persistent data script to keep track of the player's stats
-Added a script where the camera follows the player object
+Created a persistent data script to keep track of the player's stats \
+Added a script where the camera follows the player object \
 Began developing the player's inventory UI
 
 ## 4/8/2025 Jiahui Yu ##
-Worked on the Inventory UI, added a bunch of visual icons.
+Worked on the Inventory UI, added a bunch of visual icons. \
 Scripts for Inventory UI and items requires further coding or may need to be scrapped.
 
 ## 4/9/2025 Oscar Huang ##
-Updated Link to Link.md
-Updated and added new link and link to asset packs into the file
-Implementing asset pack into the project.
+Updated Link to Link.md \
+Updated and added new link and link to asset packs into the file \
+Implementing asset pack into the project. \
+\
+
+-- Project (I DID NOT PUSH THIS TO GITHUB YET)-- \
+-IMPORTANT NOTE- Currently this project is 16 pixel, if i should change it let me know
+ -   Created two different files Tileset and Sprites
+       - Tileset -> To store different tiles to use to create the map
+       - Sprites -> this is just a TEMPORARY file to fill in the role of the character so I can test the map out. Going to work with Jiahui about the character folder.
+         
+ -   Created 6 different Layers
+       - Ground -> Flooring of the map
+       - WalkinFront -> Actions of walking in front of an object
+       - Collision -> Player collision against object
+       - Player -> How the player react
+       - WalkBehind -> Action of walking behind buildings or objects
+       - Decor -> Decoration
