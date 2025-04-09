@@ -28,3 +28,8 @@ Began developing the player's inventory UI
 ## 4/8/2025 Jiahui Yu ##
 Worked on the Inventory UI, added a bunch of visual icons.
 Scripts for Inventory UI and items requires further coding or may need to be scrapped.
+
+## 4/9/2025 Oscar Huang ##
+Updated Link to Link.md
+Updated and added new link and link to asset packs into the file
+Implementing asset pack into the project.
