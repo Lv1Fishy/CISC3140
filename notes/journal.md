@@ -51,3 +51,7 @@ Implementing asset pack into the project. \
        - Player -> How the player react
        - WalkBehind -> Action of walking behind buildings or objects
        - Decor -> Decoration
+
+## 4/10/2025 Jiahui Yu ##
+Added a functional Draggable item and Inventory Slot Scripts
+
