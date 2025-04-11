@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour {
 
 
     [SerializeField] Rigidbody2D body;
+    [SerializeField] GameObject inventoryUI; // Reference to the inventory UI object
 
     void Start() {
         body = GetComponent<Rigidbody2D>();

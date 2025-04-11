@@ -18,17 +18,19 @@ public class DraggableItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
-        image.raycastTarget = false; // Disable raycast target to allow for drag events to pass through
+        image.raycastTarget = false;
     }
     public void OnDrag(PointerEventData eventData) {
         Debug.Log("Dragging");
-        transform.position = Input.mousePosition;
+        var screenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        screenPoint.z = 10.0f;
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     public void OnEndDrag(PointerEventData eventData) {
         Debug.Log("End Drag");
         transform.SetParent(parentAfterDrag);
-        image.raycastTarget = true; // Re-enable raycast target after dragging
+        image.raycastTarget = true; 
     }
    
 }
