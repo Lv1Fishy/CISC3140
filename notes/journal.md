@@ -51,3 +51,11 @@ Implementing asset pack into the project. \
 Created a personal branch \
 Finally pushed the project to my branch \
 I've only created a small path for now \
+
+## 4/12/2025 Oscar Huang ##
+Updated the map (map is bigger and more decorated) \
+Added new files
+- ReliefPalette -> Hill tileset
+- WaterPalette -> Pond tileset
+- NaturePalette -> Nature tileset
+    
