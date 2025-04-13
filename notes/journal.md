@@ -33,18 +33,21 @@ Scripts for Inventory UI and items requires further coding or may need to be scr
 Updated Link to Link.md \
 Updated and added new link and link to asset packs into the file \
 Implementing asset pack into the project. \
-\
 
 -- Project (I DID NOT PUSH THIS TO GITHUB YET)-- \
 -IMPORTANT NOTE- Currently this project is 16 pixel, if i should change it let me know
- -   Created two different files Tileset and Sprites
+ -   Created a file called Tileset
        - Tileset -> To store different tiles to use to create the map
-       - Sprites -> this is just a TEMPORARY file to fill in the role of the character so I can test the map out. Going to work with Jiahui about the character folder.
          
- -   Created 6 different Layers
+ -   Created 6 different Layers (Just a label for objects)
        - Ground -> Flooring of the map
        - WalkinFront -> Actions of walking in front of an object
-       - Collision -> Player collision against object
-       - Player -> How the player react
-       - WalkBehind -> Action of walking behind buildings or objects
-       - Decor -> Decoration
+       - Collision   -> Player collision against object
+       - Player      -> How the player react
+       - WalkBehind  -> Action of walking behind buildings or objects
+       - Decor       -> Decoration
+
+## 4/10/2025 Oscar Huang ##
+Created a personal branch \
+Finally pushed the project to my branch \
+I've only created a small path for now \
