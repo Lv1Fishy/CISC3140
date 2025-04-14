@@ -55,3 +55,11 @@ Implementing asset pack into the project. \
 ## 4/10/2025 Jiahui Yu ##
 Added a functional Draggable item and Inventory Slot Scripts
 
+## 4/11/2025 Jiahui Yu ## 
+Added the functionality of items being able to be dragged from one inventory slot to another
+
+## 4/12/2025 Jiahui Yu ##
+Added a bunch of consumable items, need to fix the issue of images showing up as canvas and sprite renderers as in game objects. Need an Inventory Manager script to handle the player inventory such as adding a backpack increases the list size.
+
+## 4/13/2025 Jiahui Yu ##
+Working on the Inventory Manager script, need to fix the bug on items being able to swap places with backpack slot when it is in backpack slot and nearby slot

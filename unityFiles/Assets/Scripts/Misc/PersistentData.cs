@@ -13,12 +13,11 @@ public class PersistentData : MonoBehaviour {
     public static PersistentData Instance;
 
     // Player data
+    // All stats listed below are default when the game starts
     [SerializeField] string playerName = "Player";
     [SerializeField] int playerLevel = 1;
     [SerializeField] int playerMaxHealth = 50;
     [SerializeField] int currentHealth = 50;
-    [SerializeField] int playerMaxEcumberance = 10;
-    [SerializeField] int currentEcumberance = 0;
 
     private void Awake()
     {
@@ -58,17 +57,6 @@ public class PersistentData : MonoBehaviour {
     public int getCurrentHealth() {
         return currentHealth;
     }
-    public void setPlayerMaxEcumberance(int maxEcumberance) {
-        playerMaxEcumberance = maxEcumberance;
-    }
-    public int getPlayerMaxEcumberance() {
-        return playerMaxEcumberance;
-    }
-    public void setCurrentEcumberance(int ecumberance) {
-        currentEcumberance = ecumberance;
-    }
-    public int getCurrentEcumberance() {
-        return currentEcumberance;
-    }
+
 }
 
