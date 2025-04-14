@@ -63,3 +63,6 @@ Added a bunch of consumable items, need to fix the issue of images showing up as
 
 ## 4/13/2025 Jiahui Yu ##
 Working on the Inventory Manager script, need to fix the bug on items being able to swap places with backpack slot when it is in backpack slot and nearby slot
+
+## 4/14/2025 Jiahui Yu ##
+Fixed the backpack slot bug; added some items images (throwables), items need functionality images
