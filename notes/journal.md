@@ -76,3 +76,7 @@ Working on the Inventory Manager script, need to fix the bug on items being able
 
 ## 4/14/2025 Jiahui Yu ##
 Fixed the backpack slot bug; added some items images (throwables), items need functionality images
+Merged my branch with Oscar's branch as checkpoint, need to resolve the issue with player and canvas not showing up when on Oscar's map
+
+## 4/15/2025 Jiahui Yu ##
+Resolved the issue with the player and canvas not showing up in Oscar's map. The problem was with the sorting layer where the player object in the Sprite Renderer has its sorting layer set to default. The issue was also the same with the canvas sortin layer.
