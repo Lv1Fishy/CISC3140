@@ -1,52 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler {
     public string slotIndex; // Index of the slot in the inventory
+    public bool isEmpty; // Indicates if the slot is empty or not
     public enum slotType {
         BACKPACK,
         INVENTORY,
-        NEARBY
+        HOTBAR
     }
 
     public slotType type;
 
-    public void OnDrop(PointerEventData eventData){
+    public Item item; // Reference to the item in the slot
+
+    void Update() {
+        Item item = GetComponentInChildren<Item>();
+        if(transform.childCount == 0) {
+            this.item = null;
+            isEmpty = true;
+        }
+        else {
+            this.item = item;
+            isEmpty = false;
+        }
+    }
+    public void OnDrop(PointerEventData eventData) {
         GameObject dropped = eventData.pointerDrag;
-        if(dropped == null) 
+        // Check if the dropped object is null
+        if (dropped == null) 
             return;
- 
+
         Item draggedItem = dropped.GetComponent<Item>();
-        if(draggedItem == null) 
+        // Check if the dragged item is null
+        if (draggedItem == null) 
             return;
 
         // Ensure backpack items can only be placed in backpack slots
-        if(draggedItem.type == Item.itemType.BACKPACK && type != slotType.BACKPACK) 
+        if (draggedItem.type == Item.itemType.BACKPACK && type != slotType.BACKPACK) 
             return;
 
-        if(type == slotType.BACKPACK && draggedItem.type != Item.itemType.BACKPACK) 
+        // Ensure non-backpack items can only be placed in inventory slots
+        if (type == slotType.BACKPACK && draggedItem.type != Item.itemType.BACKPACK) 
             return;
 
         // If slot is empty, just place it
-        if(transform.childCount == 0) {
+        if (transform.childCount == 0) {
             draggedItem.parentAfterDrag = transform;
-        }
+            isEmpty = false;
+        } 
         else {
-            // Get the item currently in the slot
+            // Handle swapping logic
             Transform currentItem = transform.GetChild(0);
             Item currentItemScript = currentItem.GetComponent<Item>();
 
-            // Swap the items' parent transforms
             Transform originalParent = draggedItem.parentAfterDrag;
-            
-            // Move the current item back to the original slot of the dragged item
+
             currentItem.SetParent(originalParent);
             currentItem.localPosition = Vector3.zero;
 
-            // Move the dragged item to this slot
             draggedItem.parentAfterDrag = transform;
         }
+
     }
+    
 }

@@ -40,13 +40,7 @@ public class Item : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
-    public void OnPointerClick(PointerEventData eventData) {
-        if (eventData.button == PointerEventData.InputButton.Left && Input.GetKey(KeyCode.LeftShift)) {
-            
-        }
-    }
-
-    public void OnEndDrag(PointerEventData eventData) {
+    public void OnEndDrag(PointerEventData eventData) {   
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
     }

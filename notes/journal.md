@@ -80,3 +80,14 @@ Merged my branch with Oscar's branch as checkpoint, need to resolve the issue wi
 
 ## 4/15/2025 Jiahui Yu ##
 Resolved the issue with the player and canvas not showing up in Oscar's map. The problem was with the sorting layer where the player object in the Sprite Renderer has its sorting layer set to default. The issue was also the same with the canvas sortin layer.
+
+## 4/16/2025 Jiahui Yu ## 
+Fix the visual issue where the item disappears when it's being dragged around by moving the Canvas object outside of the grid hierarchy.
+Scrapping the Nearby Slot where items appear when player is near an item.
+
+## 4/17/2025 Jiahui Yu ##
+Added a boolean value to InventorySlot.cs to check if the slot is empty for future uses.
+Worked on InventoryManager.cs to check the state of each Inventory slot; added a method that checks which slot is empty and returns that slot.
+Worked on InventorySlot.cs to assign the slot with the item variable.
+
+
