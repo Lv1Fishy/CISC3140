@@ -4,39 +4,26 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour{
 
-public List<InventorySlot> inventorySlots; // List of inventory slots
-[SerializeField] int slotCount = 5; // Number of slots in the inventory
+    public List<InventorySlot> inventorySlots; // List of inventory slots
 
 
     void Start(){
-        // Initialize the inventory slots
-        inventorySlots = new List<InventorySlot>();
-        for (int i = 0; i < slotCount; i++){
-            GameObject slotObject = new GameObject("Slot" + i);
-            InventorySlot slot = slotObject.AddComponent<InventorySlot>();
-            slot.slotIndex = i.ToString();
-            inventorySlots.Add(slot);
-        }
+        // Get the already existing player inventory
+        inventorySlots = new List<InventorySlot>(FindObjectsByType<InventorySlot>(FindObjectsSortMode.InstanceID));
+        inventorySlots.Sort(sortID);
+    }
+    int sortID(InventorySlot a, InventorySlot b){
+        // Sort the inventory slots by their ID
+        return a.slotIndex.CompareTo(b.slotIndex);
     }
 
-    public InventorySlot getEmptyInventorySlots(){
+    public InventorySlot getEmptySlots(string type){
         // Find the first empty slot in the inventory
         foreach (InventorySlot slot in inventorySlots){
-            if (slot.isEmpty && slot.type == InventorySlot.slotType.INVENTORY){
-                return slot;
+            if (slot.isEmpty){
+               return slot;
             }
         }
         return null; // No empty slots found
-    }
-
-    public InventorySlot getEmptyHotbarSlots(){
-        // Find the first empty hotbar slot in the inventory
-        foreach (InventorySlot slot in inventorySlots){
-            if (slot.isEmpty && slot.type == InventorySlot.slotType.HOTBAR){
-                return slot;
-            }
-        }
-        return null; // No empty hotbar slots found
-    }   
-
+    }  
 }

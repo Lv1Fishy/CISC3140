@@ -90,4 +90,14 @@ Added a boolean value to InventorySlot.cs to check if the slot is empty for futu
 Worked on InventoryManager.cs to check the state of each Inventory slot; added a method that checks which slot is empty and returns that slot.
 Worked on InventorySlot.cs to assign the slot with the item variable.
 
+## 4/18/2025 Jiahui Yu ##
+Scrapped The point clicking the item to automatically send it to the inventory/hotbar.
+Created methods in InventoryManager.cs that return the inventory slot to check which slot is empty.
+Added sprite items for players to pick up.
+Added a script for sprite item to check for player collision with sprite item.
+In InventoryManager.cs, it sorts the inventory slot by slot ID in the list and then fixed up and optimized getEmptySlots() method to check for empty inventory slots.
+In InventorySlot.cs, added a AddItem() method where the item image appears in the inventory.
+In PlayerScript.cs, fixed up the open and closing of inventory by displacing the inventory position outside of player screen when the player closes the inventory while keeping the inventory active for item pickup.
+
+
 

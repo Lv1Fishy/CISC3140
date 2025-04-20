@@ -20,17 +20,14 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] Rigidbody2D body;
     [SerializeField] GameObject inventoryUI; // Reference to the inventory UI object
     [SerializeField] PersistentData instance; // Reference to the PersistentData instance
+    [SerializeField] bool isInventoryOpen; // Flag to check if the inventory is open
     void Start() {
         //Setting up Player Stats
         HP = instance.getCurrentHealth(); // Get the current health from the PersistentData instance
-        
-
-
-
         body = GetComponent<Rigidbody2D>();
-
         inventoryUI = GameObject.FindGameObjectWithTag("Inventory"); // Find the inventory UI object by tag
-        inventoryUI.SetActive(false); // Hide the inventory UI at the start
+        inventoryUI.transform.position += new Vector3(9999, 9999, 0); // Hide the inventory UI at the start
+        isInventoryOpen = false; // Set the inventory open flag to false
     }
 
     
@@ -58,18 +55,15 @@ public class PlayerScript : MonoBehaviour {
     */
     void checkInventory() {
         if (Input.GetKeyDown(KeyCode.B)) { // Check if the "B" key is pressed
-            if (inventoryUI.activeSelf) {
-                closeInventory(); // Close the inventory if it's already open
-            } else {
-                openInventory(); // Open the inventory if it's closed
+            if (isInventoryOpen) {
+                inventoryUI.transform.position += new Vector3(9999, 9999, 0);
+                isInventoryOpen = false; 
+            } 
+            else {
+                inventoryUI.transform.position -= new Vector3(9999, 9999, 0); 
+                isInventoryOpen = true;
             }
         }
-    }
-    void openInventory() {
-        inventoryUI.SetActive(true); // Show the inventory UI when the player presses the "B" key
-    }
-    void closeInventory() {
-        inventoryUI.SetActive(false); // Hide the inventory UI when the player presses the "B" key again
     }
 
 }

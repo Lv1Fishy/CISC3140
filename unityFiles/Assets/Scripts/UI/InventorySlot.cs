@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler {
-    public string slotIndex; // Index of the slot in the inventory
+    public int slotIndex; // Index of the slot in the inventory
     public bool isEmpty; // Indicates if the slot is empty or not
     public enum slotType {
         BACKPACK,
@@ -65,6 +65,23 @@ public class InventorySlot : MonoBehaviour, IDropHandler {
             draggedItem.parentAfterDrag = transform;
         }
 
+    }
+
+    public void AddItem(Item newItem) {
+        if (isEmpty) {
+            newItem.parentAfterDrag = transform;
+        } else {
+            // Handle swapping logic if the slot is not empty
+            Transform currentItem = transform.GetChild(0);
+            Item currentItemScript = currentItem.GetComponent<Item>();
+
+            Transform originalParent = newItem.parentAfterDrag;
+
+            currentItem.SetParent(originalParent);
+            currentItem.localPosition = Vector3.zero;
+
+            newItem.parentAfterDrag = transform;
+        }
     }
     
 }
