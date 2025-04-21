@@ -99,5 +99,8 @@ In InventoryManager.cs, it sorts the inventory slot by slot ID in the list and t
 In InventorySlot.cs, added a AddItem() method where the item image appears in the inventory.
 In PlayerScript.cs, fixed up the open and closing of inventory by displacing the inventory position outside of player screen when the player closes the inventory while keeping the inventory active for item pickup.
 
-
+## 4/21/2025 Jiahui Yu ##
+Merged Oscar's branch to get the new map.
+Fixed up on some issues such as item spawner in Oscar's branch.
+Submitting the Project.
 
