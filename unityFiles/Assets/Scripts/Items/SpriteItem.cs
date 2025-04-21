@@ -29,6 +29,7 @@ public class SpriteItem : MonoBehaviour {
                 item.parentAfterDrag = slot.transform;
                 item.transform.SetParent(slot.transform);
                 item.transform.localPosition = Vector3.zero; // Reset position within the slot
+                item.transform.localScale = new Vector3(0.6f, 0.6f, 1); // Reset scale within the slot
                 Destroy(gameObject); // Destroy the original item after pickup
             }
         }

@@ -33,8 +33,7 @@ public class PlayerScript : MonoBehaviour {
 
     
     void Update() {
-        body.linearVelocity = moveInput * movementSpeed;
-        /*PlayerMovement();*/   //Checks for player input and moves the player accordingly
+        PlayerMovement();   //Checks for player input and moves the player accordingly
         checkInventory();   // Check for inventory input
         
     }
@@ -43,18 +42,12 @@ public class PlayerScript : MonoBehaviour {
         
     }
 
-    /*
-    * PlayerMovement() - Handles player movement based on input
-    */
-    void Move(InputAction.CallbackContext context) {
-         moveInput = context.ReadValue<Vector2>();
-    }
     void PlayerMovement() {
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         body.linearVelocity = new Vector2(moveHorizontal * movementSpeed, moveVertical * movementSpeed);
-        
+        Debug.Log("Player Movement: " + body.linearVelocity);
     }
 
     /*

@@ -47,23 +47,23 @@ TagManager:
   - name: Ground
     uniqueID: 2516388609
     locked: 0
+  - name: Decor
+    uniqueID: 2950256087
+    locked: 0
   - name: WalkinFront
     uniqueID: 1116892509
-    locked: 0
-  - name: Sprite Item
-    uniqueID: 810157067
-    locked: 0
-  - name: Player
-    uniqueID: 1406354483
     locked: 0
   - name: Collision
     uniqueID: 3945534369
     locked: 0
+  - name: Player
+    uniqueID: 1406354483
+    locked: 0
   - name: WalkBehind
     uniqueID: 3357019975
     locked: 0
-  - name: Decor
-    uniqueID: 2950256087
+  - name: Sprite Item
+    uniqueID: 810157067
     locked: 0
   - name: Item
     uniqueID: 3426833261
